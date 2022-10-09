@@ -8,8 +8,9 @@ $blue: #99CCFF;
 }
 
 .wrapper {
-    width: 100vh;
-    height: 100vw;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
     position: relative;
     // height: 100vh;
     // display: inline;
@@ -34,8 +35,8 @@ $blue: #99CCFF;
     position: absolute;
     // inset: 0;
     // background-color: rebeccapurple;
-    top: 10%;
-    right: -15%;
+    top: 0%;
+    left: 0%;
     transform: rotate(90deg);
     // transform-origin: 0% 0%;
 
