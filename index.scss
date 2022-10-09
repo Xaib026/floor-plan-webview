@@ -32,8 +32,8 @@ $blue: #99CCFF;
     // inset: 0;
     // background-color: rebeccapurple;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(90deg);
+    right: 0%;
+    transform: translateY(-50%) rotate(90deg);
     // transform-origin: 0% 0%;
 
     .sections {
