@@ -1960,14 +1960,15 @@
     var offsets = document.getElementById(seat).getBoundingClientRect();
     var topss = offsets.top;
     var leftss = offsets.left;
-    var prX = 100 * leftss / window.innerWidth;
-    var prY = 100 * topss / window.innerHeight;
+    var prX = Math.round(100 * (leftss - 10) / window.innerWidth);
+    var prY = Math.round(100 * (topss - 13) / window.innerHeight);
+    console.log("X=>", (prX), " Y=>", prY)
 
     if (seat[0] === 'a' || seat[0] === 'd' || seat[0] === 'e') {
         document.getElementsByClassName("tooltip")[0].style.top = prY + 2 + "%"
         document.getElementsByClassName("tooltip")[0].style.left = prX + "%"
-        document.getElementsByClassName("pointer")[0].style.top = prY - 5.5 + "%"
-        document.getElementsByClassName("pointer")[0].style.left = prX + 0.5 + "%"
+        document.getElementsByClassName("pointer")[0].style.top = prY + "%"
+        document.getElementsByClassName("pointer")[0].style.left = prX + "%"
         // document.getElementsByClassName("pointer")[0].style.rotate = "90deg"
     } else if (seat[0] === 'g' || seat[0] === 'j' || seat[0] === 'f') {
         document.getElementsByClassName("tooltip")[0].style.top = prY + 5 + "%"

@@ -256,12 +256,13 @@ $blue: #99CCFF;
 
     .tooltip {
         position: absolute;
-        top: 0;
-        left: 0;
+        // top: 0;
+        // left: 0;
         z-index: 999;
         transform: rotate(90deg);
         background-color: #f8f9fa;
         color: black;
+        min-width: 120px;
         padding: 0.5rem;
         font-size: 0.8rem;
         box-shadow: 0 0 8px 0 rgba($color: #000000, $alpha: 0.2);
