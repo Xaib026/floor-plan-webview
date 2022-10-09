@@ -1966,13 +1966,13 @@
     var PprX = Math.round(100 * (leftss + 8) / window.innerWidth);
     var PprY = Math.round(100 * (topss - 8) / window.innerHeight);
     console.log("X=>", (PprX), " Y=>", PprY)
-    console.log("X=>", (prX), " Y=>", prY - 1)
+    console.log("X=>", (prX + 3), " Y=>", prY - 2)
 
     if (seat[0] === 'a' || seat[0] === 'd' || seat[0] === 'e') {
-        document.getElementsByClassName("tooltip")[0].style.top = prY + 11 + "%"
-        document.getElementsByClassName("tooltip")[0].style.left = prX - 3 + "%"
-        document.getElementsByClassName("pointer")[0].style.top = prY - 1 + "%"
-        document.getElementsByClassName("pointer")[0].style.left = prX + 0.6 + "%"
+        document.getElementsByClassName("tooltip")[0].style.top = prY + 13 + "%"
+        document.getElementsByClassName("tooltip")[0].style.left = prX - 12 + "%"
+        document.getElementsByClassName("pointer")[0].style.top = prY - 2 + "%"
+        document.getElementsByClassName("pointer")[0].style.left = prX + 3 + "%"
         // document.getElementsByClassName("pointer")[0].style.rotate = "90deg"
     } else if (seat[0] === 'g' || seat[0] === 'j' || seat[0] === 'f') {
         document.getElementsByClassName("tooltip")[0].style.top = prY + 5 + "%"
