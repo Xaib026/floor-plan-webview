@@ -283,6 +283,11 @@ $blue: #99CCFF;
 
         }
 
+        &.secondDir2 {
+            transform: rotate(-180deg) translate(-50%, -50%);
+
+        }
+
         svg {
             width: 100%;
             fill: red;
