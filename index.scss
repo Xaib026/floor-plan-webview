@@ -15,7 +15,6 @@ $blue: #99CCFF;
 }
 
 #floor {
-    border: 1px solid;
     display: flex;
     justify-content: space-between;
     width: 100vh;
@@ -139,9 +138,9 @@ $blue: #99CCFF;
                 text-align: center;
 
                 .box {
-                    width: 30%;
-                    height: 80px;
-                    line-height: 80px;
+                    width: 50%;
+                    height: 50px;
+                    line-height: 50px;
                     margin: auto;
                     border: 1px solid;
                 }
@@ -243,53 +242,49 @@ $blue: #99CCFF;
         left: 50%;
         transform: translateX(-50%);
         width: 20%;
-        height: 80px;
+    }
 
+    .bottom {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
 
-        .bottom {
-            width: 100%;
-            height: 80px;
-        }
-
-        .bottom {
-            display: flex;
-            justify-content: space-between;
-
-            .gate-1,
-            .gate-2 {
-                width: 85px;
-                height: 80px;
-                text-align: center;
-                line-height: 80px;
-                border: 1px solid #000000;
-                font-weight: 700;
-            }
+        .gate-1,
+        .gate-2 {
+            width: 40%;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            border: 1px solid #000000;
+            font-weight: 700;
         }
     }
-}
 
-.tooltip {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    transform: rotate(90deg);
-    background-color: #f8f9fa;
-    color: black;
-    padding: 0.5rem;
-    box-shadow: 0 0 8px 0 rgba($color: #000000, $alpha: 0.2);
-}
 
-.pointer {
-    width: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    // transform: rotate(90deg);
-    z-index: 999;
+    .tooltip {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        transform: rotate(90deg);
+        background-color: #f8f9fa;
+        color: black;
+        padding: 0.5rem;
+        box-shadow: 0 0 8px 0 rgba($color: #000000, $alpha: 0.2);
+    }
 
-    svg {
-        width: 100%;
-        fill: red;
+    .pointer {
+        width: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        // transform: rotate(90deg);
+        z-index: 999;
+
+        svg {
+            width: 100%;
+            fill: red;
+        }
     }
 }
