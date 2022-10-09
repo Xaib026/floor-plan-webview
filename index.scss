@@ -273,11 +273,12 @@ $blue: #99CCFF;
         background-color: #f8f9fa;
         color: black;
         padding: 0.5rem;
+        font-size: 0.8rem;
         box-shadow: 0 0 8px 0 rgba($color: #000000, $alpha: 0.2);
     }
 
     .pointer {
-        width: 20px;
+        width: 10px;
         position: absolute;
         top: 0;
         left: 0;

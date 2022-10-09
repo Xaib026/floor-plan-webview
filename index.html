@@ -1966,17 +1966,17 @@
     var prY = 100 * topss / window.innerHeight;
 
     if (seat[0] === 'a' || seat[0] === 'd' || seat[0] === 'e') {
-        document.getElementsByClassName("tooltip")[0].style.top = prY + 4 + "%"
-        document.getElementsByClassName("tooltip")[0].style.left = prX + 2 + "%"
-        document.getElementsByClassName("pointer")[0].style.top = prY - 0 + "%"
-        document.getElementsByClassName("pointer")[0].style.left = prX + 2.5 + "%"
-        document.getElementsByClassName("pointer")[0].style.rotate = "90deg"
+        document.getElementsByClassName("tooltip")[0].style.top = prY + 6 + "%"
+        document.getElementsByClassName("tooltip")[0].style.left = prX - 1 + "%"
+        document.getElementsByClassName("pointer")[0].style.top = prY - 2.1 + "%"
+        document.getElementsByClassName("pointer")[0].style.left = prX + 0.2 + "%"
+        // document.getElementsByClassName("pointer")[0].style.rotate = "90deg"
     } else if (seat[0] === 'g' || seat[0] === 'j' || seat[0] === 'f') {
         document.getElementsByClassName("tooltip")[0].style.top = prY + 5 + "%"
         document.getElementsByClassName("tooltip")[0].style.left = prX - 4 + "%"
         document.getElementsByClassName("pointer")[0].style.top = prY + 1 + "%"
         document.getElementsByClassName("pointer")[0].style.left = prX - 0.8 + "%"
-        document.getElementsByClassName("pointer")[0].style.rotate = "-90deg"
+        // document.getElementsByClassName("pointer")[0].style.rotate = "-90deg"
     } else {
         document.getElementsByClassName("tooltip")[0].style.top = prY + 3 + "%"
         document.getElementsByClassName("tooltip")[0].style.left = prX + 2 + "%"
