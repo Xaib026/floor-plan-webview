@@ -23,16 +23,11 @@ $blue: #99CCFF;
 }
 
 #floor {
-    // width: 100vh;
-    // height: 100vw;
-    // max-height: 900px;
     border: 1px solid;
-    // max-width: 1366px;
-    // margin: 0 auto;
-    // max-height: 900px;
     display: flex;
     justify-content: space-between;
     width: 100vh;
+    height: 100vw;
     position: absolute;
     // inset: 0;
     // background-color: rebeccapurple;
@@ -254,7 +249,7 @@ $blue: #99CCFF;
 
     .gates {
         position: absolute;
-        bottom: -50px;
+        bottom: 0px;
         left: 50%;
         transform: translateX(-50%);
         width: 20%;
