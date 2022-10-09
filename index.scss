@@ -12,7 +12,8 @@ $blue: #99CCFF;
     height: 100vh;
     overflow-y: hidden;
     position: relative;
-    zoom: 90%;
+    // zoom: 90%;
+    transform: scale(0.9);
 
     #floor {
         display: flex;
@@ -257,8 +258,6 @@ $blue: #99CCFF;
 
     .tooltip {
         position: absolute;
-        // top: 0;
-        // left: 0;
         z-index: 999;
         transform: rotate(90deg) translate(-50%, -50%);
         background-color: #f8f9fa;
