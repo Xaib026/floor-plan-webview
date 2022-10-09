@@ -278,6 +278,11 @@ $blue: #99CCFF;
         // transform: rotate(90deg);
         z-index: 999;
 
+        &.secondDir {
+            transform: rotate(90deg) translate(-50%, -50%);
+
+        }
+
         svg {
             width: 100%;
             fill: red;
