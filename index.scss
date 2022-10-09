@@ -12,14 +12,6 @@ $blue: #99CCFF;
     height: 100vh;
     overflow-y: hidden;
     position: relative;
-    // height: 100vh;
-    // display: inline;
-    // background-color: yellowgreen;
-    // display: grid;
-    // place-items: center;
-    // position: relative;
-    // overflow: hidden;
-    // background-color: red;
 }
 
 #floor {
@@ -29,13 +21,10 @@ $blue: #99CCFF;
     width: 100vh;
     min-height: 100vw;
     position: absolute;
-    // inset: 0;
-    // background-color: rebeccapurple;
     top: 50%;
     left: -20%;
     right: 0;
     transform: translateY(-50%) rotate(90deg);
-    // transform-origin: 0% 0%;
 
     .sections {
         width: 33%;
@@ -284,6 +273,7 @@ $blue: #99CCFF;
     top: 0;
     left: 0;
     z-index: 999;
+    transform: rotate(90deg);
     background-color: #f8f9fa;
     color: black;
     padding: 0.5rem;
@@ -295,6 +285,7 @@ $blue: #99CCFF;
     position: absolute;
     top: 0;
     left: 0;
+    // transform: rotate(90deg);
     z-index: 999;
 
     svg {
