@@ -27,13 +27,13 @@ $blue: #99CCFF;
     display: flex;
     justify-content: space-between;
     width: 100vh;
-    height: 100vw;
+    // height: 100vw;
     position: absolute;
     // inset: 0;
     // background-color: rebeccapurple;
-    top: 0%;
-    left: 0%;
-    transform: rotate(90deg);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
     // transform-origin: 0% 0%;
 
     .sections {
