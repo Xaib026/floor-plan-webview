@@ -27,7 +27,7 @@ $blue: #99CCFF;
     display: flex;
     justify-content: space-between;
     width: 100vh;
-    height: 100vw;
+    min-height: 100vw;
     position: absolute;
     // inset: 0;
     // background-color: rebeccapurple;
