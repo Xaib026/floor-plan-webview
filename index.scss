@@ -10,12 +10,15 @@ $blue: #99CCFF;
 #floor {
     width: 100%;
     // max-width: 1366px;
-    transform: rotate(90deg);
     margin: 0 auto;
     max-height: 900px;
     display: flex;
     justify-content: space-between;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(90deg);
+    transform-origin: 35% 55%;
 
     .sections {
         width: 33%;
