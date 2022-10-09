@@ -127,7 +127,7 @@
                                 <tspan x="-44.492" y="1917" id="_a10">10</tspan>
                                 <tspan x="-42.285" y="2130" id="_a11">11</tspan>
                                 <tspan x="-44.492" y="2343" id="_a12">12</tspan>
-                                <tspan x="-44.492" y="2556" id="_a12">13</tspan>
+                                <tspan x="-44.492" y="2556" id="_a13">13</tspan>
                                 <tspan x="-44.492" y="2769" id="_a14">14</tspan>
                                 <tspan x="-44.492" y="2982" id="_a15">15</tspan>
                                 <tspan x="-44.492" y="3195" id="_a16">16</tspan>
@@ -1966,12 +1966,13 @@
     var PprX = Math.round(100 * (leftss + 8) / window.innerWidth);
     var PprY = Math.round(100 * (topss - 8) / window.innerHeight);
     console.log("X=>", (PprX), " Y=>", PprY)
+    console.log("X=>", (prX), " Y=>", prY - 1)
 
     if (seat[0] === 'a' || seat[0] === 'd' || seat[0] === 'e') {
-        document.getElementsByClassName("tooltip")[0].style.top = prY + "%"
-        document.getElementsByClassName("tooltip")[0].style.left = prX + "%"
-        document.getElementsByClassName("pointer")[0].style.top = PprY + "%"
-        document.getElementsByClassName("pointer")[0].style.left = PprX + "%"
+        document.getElementsByClassName("tooltip")[0].style.top = prY + 11 + "%"
+        document.getElementsByClassName("tooltip")[0].style.left = prX - 3 + "%"
+        document.getElementsByClassName("pointer")[0].style.top = prY - 1 + "%"
+        document.getElementsByClassName("pointer")[0].style.left = prX + 0.6 + "%"
         // document.getElementsByClassName("pointer")[0].style.rotate = "90deg"
     } else if (seat[0] === 'g' || seat[0] === 'j' || seat[0] === 'f') {
         document.getElementsByClassName("tooltip")[0].style.top = prY + 5 + "%"
