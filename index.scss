@@ -14,8 +14,6 @@ $blue: #99CCFF;
     position: relative;
 
     #floor {
-
-
         display: flex;
         justify-content: space-between;
         width: 100vh;
@@ -156,79 +154,72 @@ $blue: #99CCFF;
                         height: fit-content;
                     }
                 }
-            }
 
-            .category {
-                width: 80%;
-                margin: 3rem auto;
-                display: flex;
-                justify-content: space-between;
+                .category {
+                    width: 90%;
+                    margin: 3rem auto;
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 0.6rem;
 
-                .left {
-                    div {
-                        display: flex;
-                        margin-bottom: 0.5rem;
+                    span {
+                        width: 10px;
+                        height: 10px;
+                        margin-right: 0.5rem;
+                        display: inline-block;
+                    }
 
-                        span {
-                            width: 20px;
-                            height: 20px;
-                            margin-right: 0.5rem;
-                            display: inline-block;
-                        }
+                    .left,
+                    .right {
+                        div {
+                            display: flex;
+                            margin-bottom: 0.5rem;
 
-                        &:first-child {
-                            span {
-                                background-color: #33FF33;
+                            &:first-child {
+                                span {
+                                    background-color: #33FF33;
 
+                                }
                             }
-                        }
 
-                        &:nth-child(2) {
-                            span {
-                                background-color: #99CCFF;
+                            &:nth-child(2) {
+                                span {
+                                    background-color: #99CCFF;
 
+                                }
                             }
-                        }
 
-                        &:last-child {
-                            span {
-                                background-color: #FF6600;
+                            &:last-child {
+                                span {
+                                    background-color: #FF6600;
 
+                                }
                             }
                         }
                     }
-                }
 
-                .right {
-                    div {
-                        display: flex;
-                        margin-bottom: 0.5rem;
+                    .right {
+                        div {
 
-                        span {
-                            width: 20px;
-                            height: 20px;
-                            margin-right: 0.5rem;
-                            display: inline-block;
-                        }
+                            &:first-child {
+                                span {
+                                    background-color: #FFDA00;
 
-                        &:first-child {
-                            span {
-                                background-color: #FFDA00;
-
+                                }
                             }
-                        }
 
-                        &:nth-child(2) {
-                            span {
-                                background-color: #8E00C9;
+                            &:nth-child(2) {
+                                span {
+                                    background-color: #8E00C9;
 
+                                }
                             }
-                        }
 
-                        &:last-child {
-                            span {
-                                background-color: #FF99FF;
+                            &:last-child {
+                                span {
+                                    background-color: #FF99FF;
 
+                                }
                             }
                         }
                     }
@@ -258,9 +249,6 @@ $blue: #99CCFF;
             }
 
         }
-
-
-
     }
 
     .tooltip {
