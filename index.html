@@ -1968,22 +1968,21 @@
     console.log("X=>", (PprX), " Y=>", PprY)
     console.log("X=>", (prX + 3), " Y=>", prY - 1.5)
 
-    // if (seat[0] === 'a' || seat[0] === 'd' || seat[0] === 'e') {
-    document.getElementsByClassName("tooltip")[0].style.top = prY + 13 + "%"
-    document.getElementsByClassName("pointer")[0].style.top = prY - 1.5 + "%"
-    document.getElementsByClassName("pointer")[0].style.left = prX + 3 + "%"
-    if (seat == 'a1' || seat == 'a2' || seat == 'a3' || seat == 'a4' || seat == 'a5' || seat == 'a6') {
-        document.getElementsByClassName("tooltip")[0].style.left = prX - 42 + "%"
-    }
-    else {
-        document.getElementsByClassName("tooltip")[0].style.left = prX - 12 + "%"
+    if (seat[0] === 'a' || seat[0] === 'd') {
+        document.getElementsByClassName("tooltip")[0].style.top = prY + 13 + "%"
+        document.getElementsByClassName("pointer")[0].style.top = prY - 1.5 + "%"
+        document.getElementsByClassName("pointer")[0].style.left = prX + 3 + "%"
+        if (seat == 'a1' || seat == 'a2' || seat == 'a3' || seat == 'a4' || seat == 'a5' || seat == 'a6') {
+            document.getElementsByClassName("tooltip")[0].style.left = prX - 42 + "%"
+        }
+        else {
+            document.getElementsByClassName("tooltip")[0].style.left = prX - 12 + "%"
+        }
     }
     if (seat[0] === 'b' || seat[0] === 'c') {
         document.getElementsByClassName("tooltip")[0].style.top = prY + 13 + "%"
         document.getElementsByClassName("tooltip")[0].style.left = prX - 40 + "%"
         document.getElementsByClassName("pointer")[0].style.left = prX + 1.5 + "%"
-        // document.getElementsByClassName("pointer")[0].style.top = prY + "%"
-        // document.getElementsByClassName("pointer")[0].style.left = prX + 1.5 + "%"
         if (seat == 'b14' || seat == 'b15' || seat == 'b16' || seat == 'b17' || seat == 'b18' || seat == 'b19' || seat == 'b20' || seat == 'b21' || seat == 'b22' || seat == 'c14' || seat == 'c15' || seat == 'c16' || seat == 'c17' || seat == 'c18' || seat == 'c19' || seat == 'c20' || seat == 'c21' || seat == 'c22') {
             document.getElementsByClassName("pointer")[0].style.top = prY - 3 + "%"
             document.getElementsByClassName("pointer")[0].classList.remove("secondDir");
