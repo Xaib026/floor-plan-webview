@@ -1990,6 +1990,17 @@
             document.getElementsByClassName("tooltip")[0].style.left = prX - 12 + "%"
         }
     }
+    if (seat[0] === 'f') {
+        document.getElementsByClassName("tooltip")[0].style.top = prY + 13 + "%"
+        document.getElementsByClassName("pointer")[0].style.top = prY - 5.5 + "%"
+        document.getElementsByClassName("pointer")[0].style.left = prX + 3 + "%"
+        if (seat == 'f1' || seat == 'f2' || seat == 'f3' || seat == 'f4' || seat == 'f5' || seat == 'f6') {
+            document.getElementsByClassName("tooltip")[0].style.left = prX - 42 + "%"
+        }
+        else {
+            document.getElementsByClassName("tooltip")[0].style.left = prX - 12 + "%"
+        }
+    }
     if (seat[0] === 'b' || seat[0] === 'c') {
         document.getElementsByClassName("tooltip")[0].style.top = prY + 13 + "%"
         document.getElementsByClassName("tooltip")[0].style.left = prX - 40 + "%"
