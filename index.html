@@ -2021,10 +2021,13 @@
         if (seat == 'h14' || seat == 'h15' || seat == 'h16' || seat == 'h17' || seat == 'h18' || seat == 'h19' || seat == 'h20' || seat == 'h21' || seat == 'h22' || seat == 'i14' || seat == 'i15' || seat == 'i16' || seat == 'i17' || seat == 'i18' || seat == 'i19' || seat == 'i20' || seat == 'i21' || seat == 'i22') {
             document.getElementsByClassName("pointer")[0].style.top = prY - 3 + "%"
             document.getElementsByClassName("pointer")[0].classList.remove("secondDir");
+            document.getElementsByClassName("pointer")[0].classList.addd("secondDir2");
         }
         else {
             document.getElementsByClassName("pointer")[0].style.top = prY - 6.5 + "%"
             document.getElementsByClassName("pointer")[0].classList.add("secondDir");
+            document.getElementsByClassName("pointer")[0].classList.remove("secondDir2");
+
         }
     }
 
@@ -2032,8 +2035,8 @@
         document.getElementsByClassName("tooltip")[0].style.top = 90 + "%"
         document.getElementsByClassName("pointer")[0].style.top = prY - 10.5 + "%"
         document.getElementsByClassName("pointer")[0].style.left = prX + 3 + "%"
-        if (seat == 'd1' || seat == 'd2' || seat == 'd3' || seat == 'd4' || seat == 'd5' || seat == 'd6' || seat == 'e1' || seat == 'e2' || seat == 'e3' || seat == 'e4' || seat == 'e5' || seat == 'e6' || seat == 'f1' || seat == 'f2' || seat == 'f3' || seat == 'f4' || seat == 'f5' || seat == 'f6') {
-            document.getElementsByClassName("tooltip")[0].style.left = prX - 42 + "%"
+        if (seat == 'j1' || seat == 'j2' || seat == 'j3' || seat == 'j4' || seat == 'j5' || seat == 'j6') {
+            document.getElementsByClassName("tooltip")[0].style.left = prX - 72 + "%"
         }
         else {
             document.getElementsByClassName("tooltip")[0].style.left = prX - 12 + "%"
