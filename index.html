@@ -1955,7 +1955,7 @@
     document.getElementById(seat).style.fill = "red"
     document.getElementById("_" + seat).style.fill = "white"
 
-    document.querySelector(".tooltip p").innerHTML = `Seat No. ${seat}<br>Project Name. ${projname}<br>Student Name. ${stdname}<br><a href='#' onclick="console.log(seat)">Go to detail</a>`
+    document.querySelector(".tooltip p").innerHTML = `Seat No. ${seat}<br>Project Name. ${projname}<br>Student Name. ${stdname}`
 
     // Active seat position extract
     var offsets = document.getElementById(seat).getBoundingClientRect();
