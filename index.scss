@@ -78,7 +78,7 @@ $blue: #99CCFF;
                     width: 100%;
                     object-fit: cover;
                     height: fit-content;
-                    // min-height: 280px;
+                    min-height: 280px;
                     // max-height: 300px;
                 }
 
@@ -91,13 +91,17 @@ $blue: #99CCFF;
             .a_block,
             .j_block {
                 svg {
-                    width: 100%;
-                    object-fit: cover;
                     height: 90vw;
-                    background-color: rebeccapurple;
-                    min-height: 280px;
-                    // max-height: 350px;
-                    // height: 100vh;
+                    // background-color: rebeccapurple;
+                    // min-height: 280px;
+                }
+            }
+
+            .d_block,
+            .g_block {
+                svg {
+                    height: 80vw;
+                    // min-height: 280px;
                 }
             }
 
