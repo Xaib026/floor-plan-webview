@@ -93,9 +93,9 @@ $blue: #99CCFF;
                 svg {
                     width: 100%;
                     object-fit: cover;
-                    height: fit-content;
+                    height: 100vw;
                     min-height: 280px;
-                    max-height: 350px;
+                    // max-height: 350px;
                     // height: 100vh;
                 }
             }
