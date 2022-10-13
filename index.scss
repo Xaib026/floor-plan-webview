@@ -101,7 +101,8 @@ $blue: #99CCFF;
             .d_block,
             .g_block {
                 svg {
-                    height: 80vw;
+                    height: 90vw;
+                    object-fit: cover;
                     // min-height: 280px;
                 }
             }
