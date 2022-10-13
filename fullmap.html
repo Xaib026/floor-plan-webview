@@ -981,34 +981,34 @@
                         <div class="gate-2">Gate-2</div>
                     </div>
                     <div class="category">
-                        <div class="left">
-                            <div>
-                                <span></span>
-                                <p>IoT</p>
-                            </div>
-                            <div>
-                                <span></span>
-                                <p>Web App</p>
-                            </div>
-                            <div>
-                                <span></span>
-                                <p>Mobile App</p>
-                            </div>
+                        <!-- <div class="left"> -->
+                        <div>
+                            <span></span>
+                            <p>IoT</p>
                         </div>
-                        <div class="right">
-                            <div>
-                                <span></span>
-                                <p>Web Designing</p>
-                            </div>
-                            <div>
-                                <span></span>
-                                <p>Game Development</p>
-                            </div>
-                            <div>
-                                <span></span>
-                                <p>Editorial Choice</p>
-                            </div>
+                        <div>
+                            <span></span>
+                            <p>Web App</p>
                         </div>
+                        <div>
+                            <span></span>
+                            <p>Mobile App</p>
+                        </div>
+                        <!-- </div> -->
+                        <!-- <div class="right"> -->
+                        <div>
+                            <span></span>
+                            <p>Web Designing</p>
+                        </div>
+                        <div>
+                            <span></span>
+                            <p>Game Development</p>
+                        </div>
+                        <div>
+                            <span></span>
+                            <p>Editorial Choice</p>
+                        </div>
+                        <!-- </div> -->
                     </div>
                 </div>
                 <div class="f_block">
@@ -1888,7 +1888,6 @@
         return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
     }
 
-
     function datas(a) {
         if (a[0] == "_") {
             return a.replace('_', '').toUpperCase();
@@ -1917,9 +1916,10 @@
                 else {
                     var result = seat1
                 }
-                // alert(result);
-                // alert(seat.);
-                window.ReactNativeWebView.postMessage(JSON.stringify({ seat: result }));
+                document.getElementById(seat1.toLowerCase()).style.fill = "red"
+                document.getElementById(this.id).style.fill = "white"
+                alert(result);
+                // window.ReactNativeWebView.postMessage(JSON.stringify({ seat: result }));
             })
         }
     }

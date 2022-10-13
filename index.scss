@@ -56,9 +56,10 @@ $blue: #99CCFF;
         min-height: 100vw;
         position: absolute;
         top: 50%;
+        // top: -50%;
         transform: translateY(-50%) rotate(90deg) scale(0.8);
         // transform: scale(0.5);
-        // margin-top: 20px;
+        // margin-top: 50px;
 
         .sections {
             width: 33%;
@@ -75,12 +76,27 @@ $blue: #99CCFF;
 
                 svg {
                     width: 100%;
+                    object-fit: cover;
                     height: fit-content;
+                    min-height: 280px;
+                    max-height: 300px;
                 }
 
                 h4 {
                     font-size: 3vh;
                     text-align: center;
+                }
+            }
+
+            .a_block,
+            .j_block {
+                svg {
+                    width: 100%;
+                    object-fit: cover;
+                    height: fit-content;
+                    min-height: 280px;
+                    max-height: 350px;
+                    // height: 100vh;
                 }
             }
 
@@ -199,7 +215,7 @@ $blue: #99CCFF;
                     .gates {
                         width: 90%;
                         height: 50px;
-                        margin: 0rem auto;
+                        margin: 0rem auto 2rem;
                         display: flex;
                         justify-content: space-between;
 
@@ -217,12 +233,14 @@ $blue: #99CCFF;
                     }
 
                     .category {
-                        width: 110%;
-                        margin: 1rem auto;
+                        width: 100%;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
                         display: flex;
                         justify-content: space-between;
                         font-size: 0.6rem;
-                        margin-bottom: -1.5rem;
+                        // margin-bottom: -1.5rem;
 
                         span {
                             width: 10px;
@@ -232,58 +250,52 @@ $blue: #99CCFF;
                             display: inline-block;
                         }
 
-                        .left,
-                        .right {
-                            div {
-                                display: flex;
-                                margin-bottom: 0.5rem;
-                                white-space: nowrap;
+                        div {
+                            display: flex;
+                            margin-bottom: 0.5rem;
+                            white-space: nowrap;
 
-                                &:first-child {
-                                    span {
-                                        background-color: #33FF33;
+                            &:first-child {
+                                span {
+                                    background-color: #33FF33;
 
-                                    }
-                                }
-
-                                &:nth-child(2) {
-                                    span {
-                                        background-color: #99CCFF;
-
-                                    }
-                                }
-
-                                &:last-child {
-                                    span {
-                                        background-color: #FF6600;
-
-                                    }
                                 }
                             }
-                        }
 
-                        .right {
-                            div {
+                            &:nth-child(2) {
+                                span {
+                                    background-color: #99CCFF;
 
-                                &:first-child {
-                                    span {
-                                        background-color: #FFDA00;
-
-                                    }
                                 }
+                            }
 
-                                &:nth-child(2) {
-                                    span {
-                                        background-color: #8E00C9;
+                            &:nth-child(3) {
+                                span {
+                                    background-color: #FF6600;
 
-                                    }
                                 }
+                            }
 
-                                &:last-child {
-                                    span {
-                                        background-color: #FF99FF;
 
-                                    }
+
+                            &:nth-child(4) {
+                                span {
+                                    background-color: #FFDA00;
+
+                                }
+                            }
+
+                            &:nth-child(5) {
+                                span {
+                                    background-color: #8E00C9;
+
+                                }
+                            }
+
+                            &:last-child {
+                                span {
+                                    background-color: #FF99FF;
+
                                 }
                             }
                         }
@@ -309,13 +321,20 @@ $blue: #99CCFF;
 
         }
 
+        // svg {
+        //     tspan {
+        //         background-color: rebeccapurple;
+        //         fill: red;
+        //         width: 100px;
+        //     }
+        // }
 
     }
 
     .tooltip {
         position: absolute;
         z-index: 999;
-        transform: rotate(90deg) translate(0%, 0%);
+        transform: rotate(90deg) translate(15%, 100%);
         background-color: #f8f9fa;
         color: black;
         min-width: 120px;
@@ -332,20 +351,31 @@ $blue: #99CCFF;
         left: 0;
         transform: translate(-50%, -50%);
         z-index: 999;
+        animation: pointer 2s infinite linear alternate;
 
         &.secondDir {
             transform: rotate(90deg) translate(-50%, -50%);
-
         }
 
         &.secondDir2 {
             transform: rotate(-180deg) translate(-50%, -50%);
-
         }
 
         svg {
             width: 100%;
             fill: red;
+        }
+    }
+
+    @keyframes pointer {
+        0% {
+            margin-top: 0px;
+            transform: translate(-50%, -50%) scale(0.9);
+        }
+
+        100% {
+            margin-top: -5px;
+            transform: translate(-50%, -50%) scale(1.1);
         }
     }
 
