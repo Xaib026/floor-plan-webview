@@ -976,7 +976,6 @@
                         <h4>Floor Plan</h4>
                     </div>
                     <h4 class="entrance">Entrance</h4>
-
                     <div class="gates">
                         <div class="gate-1">Gate-1</div>
                         <div class="gate-2">Gate-2</div>
@@ -1877,16 +1876,6 @@
             </div>
 
         </div>
-        <div class="tooltip">
-            <p></p>
-        </div>
-        <div class="pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                <path
-                    d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 256c-35.3 0-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64s-28.7 64-64 64z" />
-            </svg>
-        </div>
     </div>
 </body>
 
@@ -1895,117 +1884,53 @@
 <script>
     setTimeout(function () { document.getElementsByClassName("loader")[0].style.display = "none" }, 3000);
 
+    String.prototype.splice = function (idx, rem, str) {
+        return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
+    }
 
-    // URL Parameters Code
-    var link = window.location.href;
-    var url = new URL(link);
-    var seatold = url.searchParams.get("seat")
 
     function datas(a) {
-        if (a[1] == 0) {
-            return a.replace('0', '').toLocaleLowerCase();
+        if (a[0] == "_") {
+            return a.replace('_', '').toUpperCase();
         }
         else {
-            return a.toLocaleLowerCase();
+            return a.toUpperCase();
         }
     }
-    const seat = datas(seatold);
-
-    var projname = url.searchParams.get("projname")
-    var stdname = url.searchParams.get("stdname")
-
-    // Active Color of Sears
-    document.getElementById(seat).style.fill = "red"
-    document.getElementById("_" + seat).style.fill = "white"
-
-    document.querySelector(".tooltip p").innerHTML = `Seat No. ${seat}<br>Project Name. ${projname}<br>Student Name. ${stdname}`
-
-    // Active seat position extract
-    var offsets = document.getElementById(seat).getBoundingClientRect();
-    var topss = offsets.top;
-    var leftss = offsets.left;
-    var prX = Math.round(100 * (leftss) / window.innerWidth);
-    var prY = Math.round(100 * (topss) / window.innerHeight);
-    // var PprX = Math.round(100 * (leftss + 8) / window.innerWidth);
-    // var PprY = Math.round(100 * (topss - 8) / window.innerHeight);
-    document.getElementsByClassName("tooltip")[0].style.top = prY + 5 + "%"
-    document.getElementsByClassName("tooltip")[0].style.left = prX - 1 + "%"
-    document.getElementsByClassName("pointer")[0].style.top = prY - 0.5 + "%"
-    document.getElementsByClassName("pointer")[0].style.left = prX + 0.6 + "%"
-    // if (seat[0] === 'a' || seat[0] === 'd') {
-    //     document.getElementsByClassName("tooltip")[0].style.top = prY + 13 + "%"
-    //     document.getElementsByClassName("pointer")[0].style.top = prY - 1.5 + "%"
-    //     document.getElementsByClassName("pointer")[0].style.left = prX + 3 + "%"
-    //     if (seat == 'a1' || seat == 'a2' || seat == 'a3' || seat == 'a4' || seat == 'a5' || seat == 'a6') {
-    //         document.getElementsByClassName("tooltip")[0].style.left = prX - 42 + "%"
-    //     }
-    //     else {
-    //         document.getElementsByClassName("tooltip")[0].style.left = prX - 12 + "%"
-    //     }
-    // }
-    // if (seat[0] === 'd' || seat[0] === 'e' || seat[0] === 'f') {
-    //     document.getElementsByClassName("tooltip")[0].style.top = prY + 13 + "%"
-    //     document.getElementsByClassName("pointer")[0].style.top = prY - 1 + "%"
-    //     document.getElementsByClassName("pointer")[0].style.left = prX + 2 + "%"
-    //     if (seat == 'd1' || seat == 'd2' || seat == 'd3' || seat == 'd4' || seat == 'd5' || seat == 'd6' || seat == 'e1' || seat == 'e2' || seat == 'e3' || seat == 'e4' || seat == 'e5' || seat == 'e6' || seat == 'f1' || seat == 'f2' || seat == 'f3' || seat == 'f4' || seat == 'f5' || seat == 'f6') {
-    //         document.getElementsByClassName("tooltip")[0].style.left = prX - 42 + "%"
-    //     }
-    //     else {
-    //         document.getElementsByClassName("tooltip")[0].style.left = prX - 12 + "%"
-    //     }
-    // }
-    // if (seat[0] === 'f' || seat[0] === 'g') {
-    //     document.getElementsByClassName("tooltip")[0].style.top = prY + 10 + "%"
-    //     document.getElementsByClassName("pointer")[0].style.top = prY - 7.5 + "%"
-    //     document.getElementsByClassName("pointer")[0].style.left = prX + 3 + "%"
-    //     if (seat == 'f1' || seat == 'f2' || seat == 'f3' || seat == 'f4' || seat == 'f5' || seat == 'f6' || seat == 'g1' || seat == 'g2' || seat == 'g3' || seat == 'g4' || seat == 'g5' || seat == 'g6') {
-    //         document.getElementsByClassName("tooltip")[0].style.left = prX - 42 + "%"
-    //     }
-    //     else {
-    //         document.getElementsByClassName("tooltip")[0].style.left = prX - 12 + "%"
-    //     }
-    // }
-    // if (seat[0] === 'b' || seat[0] === 'c' || seat[0] === 'h' || seat[0] === 'i') {
-    //     document.getElementsByClassName("tooltip")[0].style.top = prY + 13 + "%"
-    //     document.getElementsByClassName("tooltip")[0].style.left = prX - 40 + "%"
-    //     document.getElementsByClassName("pointer")[0].style.left = prX + 1.5 + "%"
-    //     if (seat == 'b14' || seat == 'b15' || seat == 'b16' || seat == 'b17' || seat == 'b18' || seat == 'b19' || seat == 'b20' || seat == 'b21' || seat == 'b22' || seat == 'c14' || seat == 'c15' || seat == 'c16' || seat == 'c17' || seat == 'c18' || seat == 'c19' || seat == 'c20' || seat == 'c21' || seat == 'c22') {
-    //         document.getElementsByClassName("pointer")[0].style.top = prY - 0.5 + "%"
-    //         document.getElementsByClassName("pointer")[0].classList.remove("secondDir");
-    //     }
-    //     else {
-    //         document.getElementsByClassName("pointer")[0].style.top = prY - 0.5 + "%"
-    //         document.getElementsByClassName("pointer")[0].classList.add("secondDir");
-    //     }
-    // }
-    // if (seat[0] === 'h' || seat[0] === 'i') {
-    //     document.getElementsByClassName("tooltip")[0].style.top = prY + 6 + "%"
-    //     document.getElementsByClassName("tooltip")[0].style.left = prX - 40 + "%"
-    //     document.getElementsByClassName("pointer")[0].style.left = prX + 1 + "%"
-    //     if (seat == 'h14' || seat == 'h15' || seat == 'h16' || seat == 'h17' || seat == 'h18' || seat == 'h19' || seat == 'h20' || seat == 'h21' || seat == 'h22' || seat == 'i14' || seat == 'i15' || seat == 'i16' || seat == 'i17' || seat == 'i18' || seat == 'i19' || seat == 'i20' || seat == 'i21' || seat == 'i22') {
-    //         document.getElementsByClassName("pointer")[0].style.top = prY - 3 + "%"
-    //         document.getElementsByClassName("pointer")[0].classList.remove("secondDir");
-    //         document.getElementsByClassName("pointer")[0].classList.addd("secondDir2");
-    //     }
-    //     else {
-    //         document.getElementsByClassName("pointer")[0].style.top = prY + "%"
-    //         document.getElementsByClassName("pointer")[0].classList.add("secondDir");
-    //         document.getElementsByClassName("pointer")[0].classList.remove("secondDir2");
-
-    //     }
-    // }
-
-    // if (seat[0] === 'j') {
-    //     document.getElementsByClassName("pointer")[0].style.top = prY - 10.5 + "%"
-    //     document.getElementsByClassName("pointer")[0].style.left = prX + 3 + "%"
-    //     if (seat == 'j1' || seat == 'j2' || seat == 'j3' || seat == 'j4' || seat == 'j5' || seat == 'j6') {
-    //         document.getElementsByClassName("tooltip")[0].style.left = 75 + "%"
-    //         document.getElementsByClassName("tooltip")[0].style.top = 86 + "%"
-    //     }
-    //     else {
-    //         document.getElementsByClassName("tooltip")[0].style.left = prX - 12 + "%"
-    //         document.getElementsByClassName("tooltip")[0].style.top = 90 + "%"
-    //     }
-    // }
-
+    function removeZero(a) {
+        if (a[0] == "E") {
+            return a.replace('E', '').toUpperCase();
+        }
+        else {
+            return a.toUpperCase();
+        }
+    }
+    function idGet(end, block) {
+        for (var i = 1; i <= end; i++) {
+            document.querySelector("#_" + block + i).addEventListener("click", function () {
+                var seatno = this.id;
+                const seat1 = datas(seatno);
+                var testd = removeZero(seat1);
+                if (testd < 10) {
+                    var result = seat1.splice(1, 0, "0")
+                }
+                else {
+                    var result = seat1
+                }
+                // alert(result);
+                // alert(seat.);
+                window.ReactNativeWebView.postMessage(JSON.stringify({ seat: result }));
+            })
+        }
+    }
+    idGet(23, 'a');
+    idGet(35, 'b');
+    idGet(35, 'c');
+    idGet(20, 'd');
+    idGet(16, 'e');
+    idGet(14, 'f');
+    idGet(17, 'g');
+    idGet(35, 'h');
+    idGet(35, 'i');
+    idGet(22, 'j');
 </script>

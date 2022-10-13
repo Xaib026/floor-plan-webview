@@ -7,24 +7,58 @@ $blue: #99CCFF;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.loader {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+
+    .spinner {
+        width: 50px;
+        height: 50px;
+        border: 2px solid rgba($color: rgba(22, 155, 138), $alpha: 1);
+        border-left-color: transparent;
+        border-radius: 50%;
+        animation: rotation 2s ease infinite;
+
+        @keyframes rotation {
+            0% {
+                rotate: 0deg;
+            }
+
+            100% {
+                rotate: 360deg;
+            }
+        }
+
+        // rgba(22,155,138)
+    }
+}
+
 .wrapper {
     width: 100vw;
     height: 100vh;
+    display: grid;
+    place-items: center;
     overflow-y: hidden;
     position: relative;
-    // zoom: 90%;
-    // transform: scale(0.9);
+
 
     #floor {
         display: flex;
         justify-content: space-between;
         width: 100vh;
+        // width: 100vw;
         min-height: 100vw;
         position: absolute;
         top: 50%;
-        left: -20%;
-        right: 0;
-        transform: translateY(-50%) rotate(90deg) scale(0.95);
+        transform: translateY(-50%) rotate(90deg) scale(0.8);
+        // transform: scale(0.5);
+        // margin-top: 20px;
 
         .sections {
             width: 33%;
@@ -121,110 +155,153 @@ $blue: #99CCFF;
                     }
                 }
 
-                @for $i from 1 through 14 {
+                @for $i from 1 through 18 {
                     .i_block #i#{$i} {
                         fill: #8E00C9;
                     }
                 }
 
-                @for $i from 32 through 35 {
-                    .i_block #i#{$i} {
-                        fill: #8E00C9;
-                    }
-                }
-
-                .stage {
-                    width: 100%;
-                    border-bottom: 2px solid;
-                    text-align: center;
-
-                    .box {
-                        width: 50%;
-                        height: 50px;
-                        line-height: 50px;
-                        margin: auto;
-                        border: 1px solid;
-                    }
-                }
-
-                .seats {
-                    width: 80%;
-                    margin: 3rem auto 0;
-
-                    svg {
-                        width: 100%;
-                        height: fit-content;
-                    }
-                }
-
-                .category {
-                    width: 90%;
-                    margin: 1rem auto;
+                &.center_stage {
                     display: flex;
-                    justify-content: space-between;
-                    font-size: 0.6rem;
+                    flex-direction: column;
 
-                    span {
-                        width: 10px;
-                        height: 10px;
-                        border-radius: 100%;
-                        margin-right: 0.3rem;
-                        display: inline-block;
+                    .stage {
+                        width: 100%;
+                        border-bottom: 2px solid;
+                        text-align: center;
+
+                        .box {
+                            width: 50%;
+                            height: 50px;
+                            line-height: 50px;
+                            margin: auto;
+                            border: 1px solid;
+                        }
                     }
 
-                    .left,
-                    .right {
-                        div {
-                            display: flex;
-                            margin-bottom: 0.5rem;
-                            white-space: nowrap;
+                    .seats {
+                        width: 80%;
+                        margin: 1rem auto 0.5rem;
 
-                            &:first-child {
-                                span {
-                                    background-color: #33FF33;
+                        svg {
+                            width: 100%;
+                            height: 80px;
+                        }
+                    }
 
+                    .entrance {
+                        margin-top: auto;
+                        text-align: center;
+                        margin-bottom: 0.5rem;
+                        text-transform: uppercase;
+                    }
+
+                    .gates {
+                        width: 90%;
+                        height: 50px;
+                        margin: 0rem auto;
+                        display: flex;
+                        justify-content: space-between;
+
+                        .gate-1,
+                        .gate-2 {
+                            width: 40%;
+                            height: 50px;
+                            text-align: center;
+                            line-height: 50px;
+                            border: 1px solid;
+                            font-weight: 700;
+                            font-size: 0.8rem;
+                        }
+
+                    }
+
+                    .category {
+                        width: 110%;
+                        margin: 1rem auto;
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 0.6rem;
+                        margin-bottom: -1.5rem;
+
+                        span {
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 100%;
+                            margin-right: 0.3rem;
+                            display: inline-block;
+                        }
+
+                        .left,
+                        .right {
+                            div {
+                                display: flex;
+                                margin-bottom: 0.5rem;
+                                white-space: nowrap;
+
+                                &:first-child {
+                                    span {
+                                        background-color: #33FF33;
+
+                                    }
+                                }
+
+                                &:nth-child(2) {
+                                    span {
+                                        background-color: #99CCFF;
+
+                                    }
+                                }
+
+                                &:last-child {
+                                    span {
+                                        background-color: #FF6600;
+
+                                    }
                                 }
                             }
+                        }
 
-                            &:nth-child(2) {
-                                span {
-                                    background-color: #99CCFF;
+                        .right {
+                            div {
 
+                                &:first-child {
+                                    span {
+                                        background-color: #FFDA00;
+
+                                    }
                                 }
-                            }
 
-                            &:last-child {
-                                span {
-                                    background-color: #FF6600;
+                                &:nth-child(2) {
+                                    span {
+                                        background-color: #8E00C9;
 
+                                    }
+                                }
+
+                                &:last-child {
+                                    span {
+                                        background-color: #FF99FF;
+
+                                    }
                                 }
                             }
                         }
                     }
 
-                    .right {
-                        div {
+                    .logo {
+                        width: 90%;
+                        margin: 0rem auto;
 
-                            &:first-child {
-                                span {
-                                    background-color: #FFDA00;
+                        img {
+                            width: 100%;
+                        }
 
-                                }
-                            }
-
-                            &:nth-child(2) {
-                                span {
-                                    background-color: #8E00C9;
-
-                                }
-                            }
-
-                            &:last-child {
-                                span {
-                                    background-color: #FF99FF;
-
-                                }
-                            }
+                        h4 {
+                            font-size: 3vh;
+                            text-align: center;
+                            text-transform: uppercase;
+                            margin-top: 0.7rem;
                         }
                     }
                 }
@@ -232,38 +309,17 @@ $blue: #99CCFF;
 
         }
 
-        .gates {
-            position: absolute;
-            bottom: -5%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 25%;
-            height: 50px;
-            display: flex;
-            justify-content: space-between;
 
-            .gate-1,
-            .gate-2 {
-                width: 40%;
-                height: 50px;
-                text-align: center;
-                line-height: 50px;
-                border: 1px solid #000000;
-                font-weight: 700;
-                font-size: 0.8rem;
-            }
-
-        }
     }
 
     .tooltip {
-        // display: none;
         position: absolute;
         z-index: 999;
-        transform: rotate(90deg) translate(-50%, -50%);
+        transform: rotate(90deg) translate(0%, 0%);
         background-color: #f8f9fa;
         color: black;
         min-width: 120px;
+        max-width: 150px;
         padding: 0.5rem;
         font-size: 0.8rem;
         box-shadow: 0 0 8px 0 rgba($color: #000000, $alpha: 0.2);
@@ -275,7 +331,6 @@ $blue: #99CCFF;
         top: 0;
         left: 0;
         transform: translate(-50%, -50%);
-        // transform: rotate(90deg);
         z-index: 999;
 
         &.secondDir {
