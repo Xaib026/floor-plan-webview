@@ -1903,6 +1903,10 @@
     document.getElementsByClassName("tooltip")[0].style.left = prX - 1.5 + "%"
     document.getElementsByClassName("pointer")[0].style.top = prY - 0.5 + "%"
     document.getElementsByClassName("pointer")[0].style.left = prX + 0.6 + "%"
+    if (seat[0] === 'j') {
+        document.getElementsByClassName("tooltip")[0].style.top = prY - 22.5 + "%"
+        document.getElementsByClassName("tooltip")[0].style.left = prX - 1.5 + "%"
+    }
     // if (seat[0] === 'a' || seat[0] === 'd') {
     //     document.getElementsByClassName("tooltip")[0].style.top = prY + 13 + "%"
     //     document.getElementsByClassName("pointer")[0].style.top = prY - 1.5 + "%"

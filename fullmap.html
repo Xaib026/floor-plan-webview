@@ -1894,9 +1894,9 @@
             return a.toUpperCase();
         }
     }
-    function removeZero(a) {
-        if (a[0] == "E") {
-            return a.replace('E', '').toUpperCase();
+    function removeZero(a, b) {
+        if (a[0] == b) {
+            return a.replace(b, '').toUpperCase();
         }
         else {
             return a.toUpperCase();
@@ -1907,7 +1907,7 @@
             document.querySelector("#_" + block + i).addEventListener("click", function () {
                 var seatno = this.id;
                 const seat1 = datas(seatno);
-                var testd = removeZero(seat1);
+                var testd = removeZero(seat1, block.toUpperCase());
                 if (testd < 10) {
                     var result = seat1.splice(1, 0, "0")
                 }
@@ -1916,8 +1916,8 @@
                 }
                 document.getElementById(seat1.toLowerCase()).style.fill = "red"
                 document.getElementById(this.id).style.fill = "white"
-                alert(result);
-                // window.ReactNativeWebView.postMessage(JSON.stringify({ seat: result }));
+                // alert(result);
+                window.ReactNativeWebView.postMessage(JSON.stringify({ seat: result }));
             })
         }
     }
